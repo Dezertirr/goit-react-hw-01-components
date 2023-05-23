@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
+import styles from './profile.module.css'
 
 export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => (
-  <div>
-    <img src={avatar} alt="" width={200} />
-    <h3>{username}</h3>
-    <p>{tag}</p>
-    <p>{location}</p>
+  
+  <div className={styles.userCard}>
+    <img src={avatar} alt="" width={200}  />
+    <h3 className={styles.username}>{username}</h3>
+    <p className={styles.userTag}>@{tag}</p>
+    <p className={styles.userLocation}>{location}</p>
 
-    <ul>
-      <li>{followers}</li>
-      <li>{views}</li>
-      <li>{likes}</li>
+    <ul className={styles.userStatsList}>
+      <li className={styles.itemStats}>Folowers: {followers}</li>
+      <li className={styles.itemStats}>Views: {views}</li>
+      <li className={styles.itemStats}>Likes: {likes}</li>
     </ul>
   </div>
 );

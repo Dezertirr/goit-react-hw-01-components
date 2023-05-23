@@ -1,0 +1,44 @@
+.statContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px auto;
+    border-radius: 15px;
+
+    width: 500px;
+
+
+    background-color: aqua;
+}
+
+.statTitle{
+
+}
+
+.statList{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    
+
+    padding: 0;
+    list-style: none;
+}
+
+.listItemStat{
+width: 70px;
+height: 80px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.statDoc{
+margin: 0;
+}
+
+.statPerc{
+margin: 0;
+}

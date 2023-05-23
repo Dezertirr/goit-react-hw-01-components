@@ -1,0 +1,14 @@
+.tableTrans{
+    margin:0 auto;
+}
+
+.cellType{
+width: 120px;
+background-color: rgb(0, 85, 255);
+border: 2px solid rgb(0, 0, 0);
+}
+
+.cellValue{
+    background-color: rgb(0, 145, 255);
+    border: 2px solid rgb(0, 0, 0);
+}

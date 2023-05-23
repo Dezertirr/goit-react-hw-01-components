@@ -1,24 +1,31 @@
 import PropTypes from 'prop-types';
+import styles from './TransactionHistory.module.css'
 
 export default function Transactions ({transacions}) {
     return (
         <section>
-            <table>
+            <table className={styles.tableTrans}>
+            <tbody>
             <tr>
-                <td>Type</td>
-                <td>Amount</td>
-                <td>Currency</td>
+                <td className={styles.cellType}>Type</td>
+                <td className={styles.cellType}>Amount</td>
+                <td className={styles.cellType}>Currency</td>
             </tr>
-            <tr>
-            {transacions.map(({type, amount, currency}) =>(
-            <tr>
-                <td>{type}</td>
-                <td>{amount}</td>
-                <td>{currency}</td>
+            {transacions.map(({type, amount, currency, id}) =>(
+            <tr key={id}>
+                <td className={styles.cellValue}>{type}</td>
+                <td className={styles.cellValue}>{amount}</td>
+                <td className={styles.cellValue}>{currency}</td>
             </tr>
             ))}
-            </tr>
+            </tbody>
             </table>
         </section>
     )
 }
+
+Transactions.propTypes = {
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string
+  };
